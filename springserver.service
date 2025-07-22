@@ -1,0 +1,14 @@
+[Unit]
+Description=SpringBoot Web Automatic Execute Service
+After=network.target
+Requires=network.target
+
+[Service]
+ExecStart=/opt/springserver/startup.sh 
+Restart=always
+User=root
+Group=root
+
+[Install]
+WantedBy=multi-user.target
+
